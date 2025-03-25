@@ -1,0 +1,15 @@
+/Users/uauva/Desktop/COMP123_GroupProject/AccountsGUI/AccountsGUI/bin/Debug/net8.0/AccountsGUI
+/Users/uauva/Desktop/COMP123_GroupProject/AccountsGUI/AccountsGUI/bin/Debug/net8.0/AccountsGUI.deps.json
+/Users/uauva/Desktop/COMP123_GroupProject/AccountsGUI/AccountsGUI/bin/Debug/net8.0/AccountsGUI.runtimeconfig.json
+/Users/uauva/Desktop/COMP123_GroupProject/AccountsGUI/AccountsGUI/bin/Debug/net8.0/AccountsGUI.dll
+/Users/uauva/Desktop/COMP123_GroupProject/AccountsGUI/AccountsGUI/bin/Debug/net8.0/AccountsGUI.pdb
+/Users/uauva/Desktop/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/Debug/net8.0/AccountsGUI.GeneratedMSBuildEditorConfig.editorconfig
+/Users/uauva/Desktop/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/Debug/net8.0/AccountsGUI.AssemblyInfoInputs.cache
+/Users/uauva/Desktop/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/Debug/net8.0/AccountsGUI.AssemblyInfo.cs
+/Users/uauva/Desktop/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/Debug/net8.0/AccountsGUI.csproj.CoreCompileInputs.cache
+/Users/uauva/Desktop/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/Debug/net8.0/AccountsGUI.sourcelink.json
+/Users/uauva/Desktop/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/Debug/net8.0/AccountsGUI.dll
+/Users/uauva/Desktop/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/Debug/net8.0/refint/AccountsGUI.dll
+/Users/uauva/Desktop/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/Debug/net8.0/AccountsGUI.pdb
+/Users/uauva/Desktop/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/Debug/net8.0/AccountsGUI.genruntimeconfig.cache
+/Users/uauva/Desktop/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/Debug/net8.0/ref/AccountsGUI.dll

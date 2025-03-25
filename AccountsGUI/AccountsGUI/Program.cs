@@ -6,5 +6,9 @@ class Program
     {
         Console.WriteLine("Hello, World!");
     }
+
+    static void CreateAccount()
+    {
+    }
 }
 
