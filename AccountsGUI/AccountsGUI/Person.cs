@@ -1,6 +1,20 @@
 ﻿namespace COMP123_GroupProject;
-internal class LoginEventHandler
+
+public enum ExceptionType
 {
+    PLACEHOLDER
+    
+}
+public delegate void LoginEventHandler(object sender, LoginEventArgs e);
+public class AccountException : Exception
+{
+    public ExceptionType Type { get; }
+
+    public AccountException(ExceptionType type)
+        : base(type.ToString())
+    {
+        Type = type;
+    }
 }
 public class Person
 {
@@ -9,7 +23,8 @@ public class Person
 
     public string Sin { get;}
     public string Name { get;}
-    public bool IsAuthenticated { get;}
+    public bool IsAuthenticated { get; private set; }
+
 
     public Person(string name, string sin)
     {
@@ -19,16 +34,25 @@ public class Person
 
     public void Login(string password)
     {
-        
+        if (password != this.password)
+        {
+            IsAuthenticated = false;
+            onLogin?.Invoke(this, new LoginEventArgs(Name, false, LoginEventType.Login));
+            throw new AccountException(ExceptionType.PLACEHOLDER);
+        }
+
+        IsAuthenticated = true;
+        onLogin?.Invoke(this, new LoginEventArgs(Name, true, LoginEventType.Login));
     }
     public void Logout()
     {
-            
+        IsAuthenticated = false;
+        onLogin?.Invoke(this, new LoginEventArgs(Name, true, LoginEventType.Logout));
     }
 
     public override string ToString()
     {
-        return base.ToString();
+        return $"{Name} - Authenticated: {IsAuthenticated}";
     }
 }
 
