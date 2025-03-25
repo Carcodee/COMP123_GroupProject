@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AccountsGUI
-build_property.ProjectDir = /Users/kevinkhuu/Documents/COMP123 Programming 2/COMP123_Group_Project/AccountsGUI/AccountsGUI/
+build_property.ProjectDir = C:\Users\carlo\RiderProjects\COMP123_GroupProject\AccountsGUI\AccountsGUI\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
