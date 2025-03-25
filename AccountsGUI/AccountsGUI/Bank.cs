@@ -9,6 +9,7 @@ public class Bank
 
     Bank()
     {
+        
     }
 
     public void AddUser()
@@ -55,6 +56,3 @@ public class Bank
         
     }
 }
-
-
-    

@@ -12,13 +12,12 @@ public class DayTime
 }
 public class LoginEventArgs : EventArgs
 {
-
     public string PersonName { get; }
     public bool Success { get; }
     public DayTime Time { get; }
     public LoginEventType EventType { get; }
 
-    LoginEventArgs(string username, bool success, LoginEventType loginEventType)
+    LoginEventArgs(string username, bool success, LoginEventType loginEventType) : base() 
     {
         PersonName = username;
         Success = success;
