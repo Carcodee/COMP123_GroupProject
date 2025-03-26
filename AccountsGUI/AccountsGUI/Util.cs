@@ -1,6 +1,5 @@
 namespace AccountsGUI;
-
-public class Util
+static class Util
 {
     private static Random random = new Random();
 
