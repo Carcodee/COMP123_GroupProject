@@ -1,5 +1,4 @@
-﻿namespace COMP123_GroupProject;
-
+﻿namespace AccountsGUI;
 
 public enum LoginEventType
 {

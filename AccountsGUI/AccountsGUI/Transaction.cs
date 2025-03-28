@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace AccountsGUI
 {
 	public struct Transaction

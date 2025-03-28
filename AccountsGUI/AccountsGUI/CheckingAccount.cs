@@ -1,6 +1,6 @@
 namespace AccountsGUI;
 
-public class CheckingAccount : Account
+class CheckingAccount : Account
 {
     private decimal COST_PER_TRANSACTION = 0.05m;
     private decimal INTEREST_RATE = 0.005m;
@@ -31,7 +31,7 @@ public class CheckingAccount : Account
             throw new AccountException("USER_NOT_LOGGED_IN");
         }
 
-        if ( amount < balance && !hasOverdraft)
+        if ( amount < Person.balance && !hasOverdraft)
         {
             OnTransactionOccur(new TransactionEventArgs(person.Name, amount, false));
             throw new AccountException("CREDIT_LIMIT_HAS_BEEN_EXCEEDED");

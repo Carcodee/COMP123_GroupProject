@@ -1,21 +1,21 @@
-﻿namespace COMP123_GroupProject;
+﻿namespace AccountsGUI;
 
-public enum ExceptionType
-{
-    PLACEHOLDER
+//public enum ExceptionType
+//{
+//    PLACEHOLDER
     
-}
-public delegate void LoginEventHandler(object sender, LoginEventArgs e);
-public class AccountException : Exception
-{
-    public ExceptionType Type { get; }
+//}
+//public delegate void LoginEventHandler(object sender, LoginEventArgs e);
+//public class AccountException : Exception
+//{
+//    public ExceptionType Type { get; }
 
-    public AccountException(ExceptionType type)
-        : base(type.ToString())
-    {
-        Type = type;
-    }
-}
+//    public AccountException(ExceptionType type)
+//        : base(type.ToString())
+//    {
+//        Type = type;
+//    }
+//}
 public class Person
 {
     private string password;
