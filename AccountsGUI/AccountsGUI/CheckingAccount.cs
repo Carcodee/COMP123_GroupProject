@@ -14,31 +14,31 @@ class CheckingAccount : Account
     public new void Deposit (decimal amount, Person person)
     {
         base.Deposit(amount, person);
-        base.OnTransactionOccur(new TransactionEventArgs(person.Name, amount, false));
+        base.OnTransactionOccur(person, new TransactionEventArgs(person.Name, amount, false));
     }
 
     public void Withdraw ( decimal amount, Person person)
     {
-        if ( !IsUser(person))
+        if ( !IsUser(person.Name))
         {
-            OnTransactionOccur(new TransactionEventArgs(person.Name, amount, false));
+            OnTransactionOccur(person, new TransactionEventArgs(person.Name, amount, false));
             throw new AccountException("NAME_NOT_ASSOCIATED_WITH_ACCOUNT");
         }
 
         if (!person.IsAuthenticated)
         {
-            OnTransactionOccur(new TransactionEventArgs(person.Name, amount, false));
+            OnTransactionOccur(person, new TransactionEventArgs(person.Name, amount, false));
             throw new AccountException("USER_NOT_LOGGED_IN");
         }
 
         if ( amount < Person.balance && !hasOverdraft)
         {
-            OnTransactionOccur(new TransactionEventArgs(person.Name, amount, false));
+            OnTransactionOccur(person, new TransactionEventArgs(person.Name, amount, false));
             throw new AccountException("CREDIT_LIMIT_HAS_BEEN_EXCEEDED");
         }
 
         base.Deposit(-amount, person);
-        OnTransactionOccur(new TransactionEventArgs(person.Name, -amount, true));
+        OnTransactionOccur(person, new TransactionEventArgs(person.Name, -amount, true));
     }
 
     public override void PrepareMonthlyReport()
