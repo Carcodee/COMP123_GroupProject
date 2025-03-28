@@ -1,25 +1,23 @@
 ﻿<Properties StartupConfiguration="{480E63FA-494F-4399-BD78-9C80435706DA}|Default">
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.AccountsGUI PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="AccountsGUI/Program.cs">
     <Files>
-      <File FileName="AccountsGUI/Program.cs" Line="11" Column="1" />
+      <File FileName="AccountsGUI/Program.cs" Line="16" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AccountsGUI" expanded="True">
-            <Node name="AccountsGUI" expanded="True">
-              <Node name="Program.cs" selected="True" />
-            </Node>
+            <Node name="AccountsGUI" expanded="True" selected="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.AccountsGUI FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
