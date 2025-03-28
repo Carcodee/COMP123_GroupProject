@@ -2,8 +2,8 @@ namespace AccountsGUI;
 
 public class AccountException : Exception
 {
-    public AccountException(ExceptionType reason) : base(reason.ToString())
+    public AccountException(AccountExceptionType reason) : base(reason.ToString())
     {
-        
+        Console.WriteLine(reason);
     }
 }

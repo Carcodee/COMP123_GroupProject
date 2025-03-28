@@ -21,8 +21,6 @@ public class LoginEventArgs : EventArgs
         PersonName = username;
         Success = success;
         EventType = loginEventType;
-        //handle type
-        //time = someutilfunc
     }
     
 }

@@ -8,7 +8,7 @@ public static class Logger
         public static void LoginHandler(object sender, LoginEventArgs args)
         {
             string PersonName = args.PersonName;
-            string Success = args.Success;
+            string Success = args.Success.ToString();
         }
 
         public static void TransactionHandler(object sender, TransactionEventArgs args)

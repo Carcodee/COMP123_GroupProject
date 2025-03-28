@@ -13,6 +13,8 @@ abstract class Account
     public decimal LowestBalance { get; protected set; }
     public string Number { get; }
 
+    public abstract void PrepareMonthlyReport();
+
     public Account(string type, decimal balance)
     {
         Number = $"{type}{LAST_NUMBER}";
@@ -33,21 +35,18 @@ abstract class Account
     {
     }
 
-    public bool IsUser(string name)
+    public bool IsUser(Person person)
     {
-    }
-
-    public abstract void PrepareMonthlyReport()
-    {
+        return true;
     }
 
     public virtual void OnTransactionOccur(object sender, TransactionEventArgs e)
     {
-            
+        OnTransaction(sender, e);
     }
 
     public override string ToString()
     {
-            
+        return $"";
     }
 }
