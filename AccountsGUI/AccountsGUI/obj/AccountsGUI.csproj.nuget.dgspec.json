@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kevinkhuu/Documents/COMP123 Programming 2/COMP123_Group_Project/AccountsGUI/AccountsGUI/AccountsGUI.csproj": {}
+    "/Users/kevinkhuu/Documents/COMP123 Programming 2/COMP123_GroupProject/AccountsGUI/AccountsGUI/AccountsGUI.csproj": {}
   },
   "projects": {
-    "/Users/kevinkhuu/Documents/COMP123 Programming 2/COMP123_Group_Project/AccountsGUI/AccountsGUI/AccountsGUI.csproj": {
+    "/Users/kevinkhuu/Documents/COMP123 Programming 2/COMP123_GroupProject/AccountsGUI/AccountsGUI/AccountsGUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kevinkhuu/Documents/COMP123 Programming 2/COMP123_Group_Project/AccountsGUI/AccountsGUI/AccountsGUI.csproj",
+        "projectUniqueName": "/Users/kevinkhuu/Documents/COMP123 Programming 2/COMP123_GroupProject/AccountsGUI/AccountsGUI/AccountsGUI.csproj",
         "projectName": "AccountsGUI",
-        "projectPath": "/Users/kevinkhuu/Documents/COMP123 Programming 2/COMP123_Group_Project/AccountsGUI/AccountsGUI/AccountsGUI.csproj",
+        "projectPath": "/Users/kevinkhuu/Documents/COMP123 Programming 2/COMP123_GroupProject/AccountsGUI/AccountsGUI/AccountsGUI.csproj",
         "packagesPath": "/Users/kevinkhuu/.nuget/packages/",
-        "outputPath": "/Users/kevinkhuu/Documents/COMP123 Programming 2/COMP123_Group_Project/AccountsGUI/AccountsGUI/obj/",
+        "outputPath": "/Users/kevinkhuu/Documents/COMP123 Programming 2/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/kevinkhuu/.nuget/NuGet/NuGet.Config"
