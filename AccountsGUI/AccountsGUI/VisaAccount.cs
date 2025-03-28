@@ -4,28 +4,30 @@ using System.Xml.Linq;
 
 namespace AccountsGUI
 {
-	public class VisaAccount : Account, ITransaction
+	class VisaAccount : Account //, ITransaction
     {
 		private decimal CreditLimit { get; }
 		private static decimal INTEREST_RATE = 0.1995M;
 
-		public VisaAccount(double balance = 0, decimal creditLimit = 1200M)
-		{
-			Account("VS", balance);
-			this.CreditLimit = creditLimit;
-		}
+        public VisaAccount(decimal balance = 0, decimal creditLimit = 1200M)
+            : base("VS", balance) => (this.CreditLimit) = (creditLimit);
 
-	}
-	public void DoPayment(decimal amount, Person person)
-	{
-		TransactionEventArgs eventArgs = new TransactionEventArgs(person.Name, amount, true);
-        Deposit(amount, person);
-		OnTransactionOccur(person, eventArgs);
-	}
-	public void DoPurchase(decimal amount, Person person)
-	{
+        public void DoPayment(decimal amount, Person person)
+        {
+            TransactionEventArgs eventArgs = new TransactionEventArgs(person.Name, amount, true);
+            Deposit(amount, person);
+            OnTransactionOccur(person, eventArgs);
+        }
+        public void DoPurchase(decimal amount, Person person)
+        {
 
-	}
+        }
+
+        public override void PrepareMonthlyReport()
+        {
+
+        }
+    }
 }
 
 
