@@ -1,21 +1,7 @@
-﻿namespace AccountsGUI;
+﻿using static AccountsGUI.Delegates;
 
-//public enum ExceptionType
-//{
-//    PLACEHOLDER
-    
-//}
-//public delegate void LoginEventHandler(object sender, LoginEventArgs e);
-//public class AccountException : Exception
-//{
-//    public ExceptionType Type { get; }
+namespace AccountsGUI;
 
-//    public AccountException(ExceptionType type)
-//        : base(type.ToString())
-//    {
-//        Type = type;
-//    }
-//}
 public class Person
 {
     private string password;
@@ -38,7 +24,7 @@ public class Person
         {
             IsAuthenticated = false;
             onLogin?.Invoke(this, new LoginEventArgs(Name, false, LoginEventType.Login));
-            throw new AccountException(ExceptionType.PLACEHOLDER);
+            throw new AccountException(AccountExceptionType.PASSWORD_INCORRECT);
         }
 
         IsAuthenticated = true;

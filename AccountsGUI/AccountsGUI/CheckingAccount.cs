@@ -19,22 +19,22 @@ class CheckingAccount : Account
 
     public void Withdraw ( decimal amount, Person person)
     {
-        if ( !IsUser(person.Name))
+        if (!IsUser(person))
         {
             OnTransactionOccur(person, new TransactionEventArgs(person.Name, amount, false));
-            throw new AccountException("NAME_NOT_ASSOCIATED_WITH_ACCOUNT");
+            throw new AccountException(AccountExceptionType.NAME_NOT_ASSOCIATED_WITH_ACCOUNT);
         }
 
         if (!person.IsAuthenticated)
         {
             OnTransactionOccur(person, new TransactionEventArgs(person.Name, amount, false));
-            throw new AccountException("USER_NOT_LOGGED_IN");
+            throw new AccountException(AccountExceptionType.USER_NOT_LOGGED_IN);
         }
 
-        if ( amount < Person.balance && !hasOverdraft)
+        if ( amount < Balance && !hasOverdraft)
         {
             OnTransactionOccur(person, new TransactionEventArgs(person.Name, amount, false));
-            throw new AccountException("CREDIT_LIMIT_HAS_BEEN_EXCEEDED");
+            throw new AccountException(AccountExceptionType.CREDIT_LIMIT_HAS_BEEN_EXCEEDED);
         }
 
         base.Deposit(-amount, person);
@@ -43,10 +43,10 @@ class CheckingAccount : Account
 
     public override void PrepareMonthlyReport()
     {
-        decimal serviceCharge = COST_PER_TRANSACTION * numberOfTransactions;
+        decimal serviceCharge = COST_PER_TRANSACTION * transactions.Count;
         decimal interest = (LowestBalance * INTEREST_RATE) / 12;
         
-        balance += interest - serviceCharge;
-        Transactions.Clear();
+        Balance += interest - serviceCharge;
+        transactions.Clear();
     }
 }

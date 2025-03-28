@@ -44,13 +44,13 @@ namespace AccountsGUI
                 OnTransactionOccur(person, t);
                 Deposit(amount * -1, person);
             }
-            
-
         }
 
         public override void PrepareMonthlyReport()
         {
-
+            decimal interest = (LowestBalance * INTEREST_RATE) / 12;
+            Balance -= interest;
+            transactions.Clear();
         }
     }
 }
