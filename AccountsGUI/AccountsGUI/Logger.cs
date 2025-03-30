@@ -1,31 +1,41 @@
+using System.Transactions.TransactionEventArgs;
 namespace AccountsGUI;
 
 public static class Logger
     { 
-        private static List<string> loginEvents;
-        private static List<string> transactionEvents;
+        private static List<string> loginEvents = new List<string>();
+        private static List<string> transactionEvents = new List<string>();
 
         public static void LoginHandler(object sender, LoginEventArgs args)
         {
-            string PersonName = args.PersonName;
-            string Success = args.Success;
+            string log = $"Login attempted by {args.PersonName}, Succsess: {args.Success}";
+            loginEvents.Add(log);
         }
 
         public static void TransactionHandler(object sender, TransactionEventArgs args)
         {
-            string PersonName;
-            string Amount;
-            string Operation;
-            string Success;
+            string log = $"Transaction - Name: {args.PersonName}, Amount: {args.Amount}, Operation: {args.Operation}, Success: {args.Success}";
+            transactionEvents.Add(log); 
         }
 
         public static void DispalyLoginEvents(string filename)
         {
-            Console.WriteLine(loginEvents.Count);
+            Console.WriteLine("Login events:");
+            int count = 0;
+            foreach (string log in loginEvents)
+            {
+                Console.WriteLine($"{count++}. {log}");
+            }
+            
         }
 
         public static void DisplayTransactionEvents()
         {
-            Console.WriteLine(transactionEvents.Count);
+            Console.WriteLine("Transaction events:");
+            int count = 0;
+            foreach (string log in transactionEvents)
+            {
+                Console.WriteLine($"{count++}. {log}");
+            }
         }
     }
