@@ -3,10 +3,10 @@ using System.Transactions;
 namespace AccountsGUI;
 
 
-abstract class Account 
+abstract class Account
 {
-        protected List<Person> users { get; }
-        public List<Transaction> transactions { get; }
+    protected List<Person> users { get; } = new List<Person>();
+        public List<Transaction> transactions { get; } = new List<Transaction>();
         private static int LAST_NUMBER = 100_000;
         private event TransactionEventhandler OnTransaction;
         public decimal Balance { get; protected set; }
