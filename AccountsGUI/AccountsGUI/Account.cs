@@ -5,13 +5,14 @@ namespace AccountsGUI;
 
 abstract class Account 
 {
-    protected List<Person> users { get; } 
-    public List<Transaction> transactions { get; }
-    private int LAST_NUMBER = 100_000;
+    protected List<Person> users { get; } = new List<Person>();
+    public List<Transaction> transactions { get; } = new List<Transaction>();
+    private static int LAST_NUMBER = 100_000;
     private event TransactionEventHandler OnTransaction; 
     public decimal Balance { get; protected set; }
     public decimal LowestBalance { get; protected set; }
     public string Number { get; }
+
 
     public abstract void PrepareMonthlyReport();
 
@@ -31,22 +32,52 @@ abstract class Account
         transactions.Add(t);
     }
 
-    public void AddUser(Person Person)
+    public void AddUser(Person user)
     {
+        users.Add(user);
     }
 
-    public bool IsUser(Person person)
+    public bool IsUser(Person user)
     {
-        return true;
+        foreach (Person person in users)
+        {
+            if (person.Name == user.Name && person.Sin == user.Sin)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public virtual void OnTransactionOccur(object sender, TransactionEventArgs e)
     {
-        OnTransaction(sender, e);
+        OnTransaction?.Invoke(sender, e);
     }
 
     public override string ToString()
     {
-        return $"";
+        string result = $"Account Number: {Number}\n";
+
+        result += $"Users\n";
+        foreach (Person user in users)
+        {
+            result += $"{user.Name}\n";
+        }
+
+        result += $"Balance: {Balance}\n";
+        result += $"Transactions\n";
+
+        if (transactions.Count == 0)
+        {
+            result += "No transactions available\n";
+        }
+        else
+        {
+            foreach (Transaction t in transactions)
+            {
+                result += $"{t}\n";
+            }
+        }
+        return result;
     }
 }
