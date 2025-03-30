@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/uauva/Desktop/COMP123_GroupProject/AccountsGUI/AccountsGUI/AccountsGUI.csproj": {}
+    "/Users/uauva/Desktop/Project/AccountsGUI/AccountsGUI/AccountsGUI.csproj": {}
   },
   "projects": {
-    "/Users/uauva/Desktop/COMP123_GroupProject/AccountsGUI/AccountsGUI/AccountsGUI.csproj": {
+    "/Users/uauva/Desktop/Project/AccountsGUI/AccountsGUI/AccountsGUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/uauva/Desktop/COMP123_GroupProject/AccountsGUI/AccountsGUI/AccountsGUI.csproj",
+        "projectUniqueName": "/Users/uauva/Desktop/Project/AccountsGUI/AccountsGUI/AccountsGUI.csproj",
         "projectName": "AccountsGUI",
-        "projectPath": "/Users/uauva/Desktop/COMP123_GroupProject/AccountsGUI/AccountsGUI/AccountsGUI.csproj",
+        "projectPath": "/Users/uauva/Desktop/Project/AccountsGUI/AccountsGUI/AccountsGUI.csproj",
         "packagesPath": "/Users/uauva/.nuget/packages/",
-        "outputPath": "/Users/uauva/Desktop/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/",
+        "outputPath": "/Users/uauva/Desktop/Project/AccountsGUI/AccountsGUI/obj/",
         "projectStyle": "PackageReference",
         "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
