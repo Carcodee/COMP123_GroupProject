@@ -1,5 +1,4 @@
-﻿namespace COMP123_GroupProject;
-
+﻿namespace AccountsGUI;
 
 public enum LoginEventType
 {
@@ -22,8 +21,6 @@ public class LoginEventArgs : EventArgs
         PersonName = username;
         Success = success;
         EventType = loginEventType;
-        //handle type
-        //time = someutilfunc
     }
     
 }

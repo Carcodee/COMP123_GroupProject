@@ -1,0 +1,15 @@
+/Users/praisewashere/Documents/GitHub/COMP123_GroupProject/AccountsGUI/AccountsGUI/bin/Debug/net8.0/AccountsGUI
+/Users/praisewashere/Documents/GitHub/COMP123_GroupProject/AccountsGUI/AccountsGUI/bin/Debug/net8.0/AccountsGUI.deps.json
+/Users/praisewashere/Documents/GitHub/COMP123_GroupProject/AccountsGUI/AccountsGUI/bin/Debug/net8.0/AccountsGUI.runtimeconfig.json
+/Users/praisewashere/Documents/GitHub/COMP123_GroupProject/AccountsGUI/AccountsGUI/bin/Debug/net8.0/AccountsGUI.dll
+/Users/praisewashere/Documents/GitHub/COMP123_GroupProject/AccountsGUI/AccountsGUI/bin/Debug/net8.0/AccountsGUI.pdb
+/Users/praisewashere/Documents/GitHub/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/Debug/net8.0/AccountsGUI.GeneratedMSBuildEditorConfig.editorconfig
+/Users/praisewashere/Documents/GitHub/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/Debug/net8.0/AccountsGUI.AssemblyInfoInputs.cache
+/Users/praisewashere/Documents/GitHub/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/Debug/net8.0/AccountsGUI.AssemblyInfo.cs
+/Users/praisewashere/Documents/GitHub/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/Debug/net8.0/AccountsGUI.csproj.CoreCompileInputs.cache
+/Users/praisewashere/Documents/GitHub/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/Debug/net8.0/AccountsGUI.sourcelink.json
+/Users/praisewashere/Documents/GitHub/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/Debug/net8.0/AccountsGUI.dll
+/Users/praisewashere/Documents/GitHub/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/Debug/net8.0/refint/AccountsGUI.dll
+/Users/praisewashere/Documents/GitHub/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/Debug/net8.0/AccountsGUI.pdb
+/Users/praisewashere/Documents/GitHub/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/Debug/net8.0/AccountsGUI.genruntimeconfig.cache
+/Users/praisewashere/Documents/GitHub/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/Debug/net8.0/ref/AccountsGUI.dll
