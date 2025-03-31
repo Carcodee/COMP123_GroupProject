@@ -4,7 +4,7 @@ using System.Xml.Linq;
 
 namespace AccountsGUI
 {
-	class VisaAccount : Account //, ITransaction
+	class VisaAccount : Account
     {
 		private decimal CreditLimit { get; }
 		private static decimal INTEREST_RATE = 0.1995M;
