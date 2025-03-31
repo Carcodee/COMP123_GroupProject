@@ -1,13 +1,10 @@
 ﻿using System.Text.Json;
 
-namespace COMP123_GroupProject;
-public class Account
-{
-}
+namespace AccountsGUI;
 public static class Bank
 {
-    static private readonly Dictionary<string, Account> ACCOUNTS;
-    static private readonly Dictionary<string, Person> USERS;
+    static private readonly Dictionary<string, Account> ACCOUNTS = new Dictionary<string, Account>();
+    static private readonly Dictionary<string, Person> USERS = new Dictionary<string, Person>();
 
     static Bank()
     {
@@ -68,7 +65,7 @@ public static class Bank
         {
             if (USERS.ContainsKey(sin))
             {
-                throw new AccountException(ExceptionType.PLACEHOLDER);
+                throw new AccountException(AccountExceptionType.USER_ALREADY_EXIST);
             }
             else
             {
@@ -86,14 +83,14 @@ public static class Bank
     {
         try
         {
-            // if (ACCOUNTS.ContainsKey(account.number))
-            // {
-            //     throw new AccountException(ExceptionType.PLACEHOLDER);
-            // }
-            // else
-            // {
-            //     // ACCOUNTS.Add(account.number, account);
-            // }
+            if (ACCOUNTS.ContainsKey(account.Number))
+            {
+                throw new AccountException(AccountExceptionType.ACCOUNT_ALREADY_EXIST);
+            }
+            else
+            {
+                ACCOUNTS.Add(account.Number, account);
+            }
         }
         catch (AccountException e)
         {
@@ -106,7 +103,7 @@ public static class Bank
     {
         Person person = GetUser(name);
         Account account = GetAccount(number);
-        // account.AddUser(person);
+        account.AddUser(person);
     }
     
     public static Account GetAccount(string number)
@@ -115,7 +112,7 @@ public static class Bank
         {
             if (!ACCOUNTS.ContainsKey(number))
             {
-                throw new AccountException(ExceptionType.PLACEHOLDER);
+                throw new AccountException(AccountExceptionType.ACCOUNT_DOES_NOT_EXIST);
             } 
             return ACCOUNTS.GetValueOrDefault(number);
         }
@@ -138,7 +135,7 @@ public static class Bank
                 } 
             }
 
-            throw new AccountException(ExceptionType.PLACEHOLDER);
+            throw new AccountException(AccountExceptionType.USER_DOES_NOT_EXIST);
         }
         catch (AccountException e)
         {

@@ -3,7 +3,7 @@ using static AccountsGUI.Delegates;
 
 namespace AccountsGUI;
 
-abstract class Account 
+public abstract class Account 
 {
     protected List<Person> users { get; } = new List<Person>();
     public List<Transaction> transactions { get; } = new List<Transaction>();

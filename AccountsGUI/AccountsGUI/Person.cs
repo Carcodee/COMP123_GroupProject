@@ -1,7 +1,5 @@
 ﻿using static AccountsGUI.Delegates;
-
 namespace AccountsGUI;
-
 public class Person
 {
     private string password;
