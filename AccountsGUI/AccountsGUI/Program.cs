@@ -145,15 +145,7 @@ class Program
         }
         catch (AccountException e) { Console.WriteLine(e.Message); }
 
-        //show all transactions
-        Console.WriteLine("\n\nAll transactions");
-        foreach (var transaction in Bank.GetAllTransactions())
-        {
-            Console.WriteLine(transaction);
-        }
         //saving events to json file
-
-
         foreach (var keyValuePair in Bank.ACCOUNTS)
         {
             Console.Write("\n*******************");
@@ -166,7 +158,7 @@ class Program
             Console.WriteLine(account);
         }
 
-        Logger.DisplayLoginEvents();
+        Logger.DisplayLoginEvents("Login Events");
         Logger.DisplayTransactionEvents();
 
     }

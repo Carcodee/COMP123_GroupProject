@@ -6,9 +6,7 @@ public enum LoginEventType
     Login,
     Logout
 }
-public class DayTime
-{
-}
+
 public class LoginEventArgs : EventArgs
 {
     public string PersonName { get; }

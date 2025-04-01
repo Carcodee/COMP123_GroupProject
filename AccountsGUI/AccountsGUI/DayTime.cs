@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BankingApplication
+namespace AccountsGUI
 {
     public struct DayTime
     {

@@ -17,7 +17,7 @@ public static class Logger
         transactionEvents.Add(log);
     }
 
-    public static void DispalyLoginEvents(string filename)
+    public static void DisplayLoginEvents(string filename)
     {
         Console.WriteLine("Login events:");
         int count = 0;

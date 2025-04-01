@@ -2,7 +2,7 @@
 using System.Security.Principal;
 using System.Transactions;
 
-namespace BankingApplication
+namespace AccountsGUI
 {
     public class SavingAccount : Account
     {

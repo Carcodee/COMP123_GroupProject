@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BankingApplication
+namespace AccountsGUI
 {
     public class TransactionEventArgs : LoginEventArgs
     {
@@ -9,7 +9,7 @@ namespace BankingApplication
         public TransactionEventArgs(string personName, decimal amount, bool success)
             : base(personName, success, LoginEventType.None)
         {
-            Amount = amount;
+            this.Amount = amount;
         }
     }
 }

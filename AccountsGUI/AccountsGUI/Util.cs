@@ -3,14 +3,15 @@ static class Util
 {
     private static Random random = new Random();
 
-    private static DateTime currentTime = new DateTime(2025, 3, 22, 10, 15, 0);
+    private static DayTime currentTime = new DayTime(1169280);
 
-    public static DateTime Now
+    public static DayTime Now
     {
         get
         {
-            currentTime = currentTime.AddSeconds(random.Next(100));
+            currentTime = currentTime + random.Next(100);
             return currentTime;
         }
     }
 }
+

@@ -3,8 +3,8 @@
 namespace AccountsGUI;
 public static class Bank
 {
-    static private readonly Dictionary<string, Account> ACCOUNTS = new Dictionary<string, Account>();
-    static private readonly Dictionary<string, Person> USERS = new Dictionary<string, Person>();
+    static public readonly Dictionary<string, Account> ACCOUNTS = new Dictionary<string, Account>();
+    static public readonly Dictionary<string, Person> USERS = new Dictionary<string, Person>();
 
     static Bank()
     {
