@@ -11,10 +11,9 @@ public static class Logger
         loginEvents.Add(log);
     }
 
-    // Operations: amount in args? What does that mean? -kk
     public static void TransactionHandler(object sender, TransactionEventArgs args)
     {
-        string log = $"Transaction - Name: {args.PersonName}, Amount: {args.Amount}, Operation: {args.Operation}, Success: {args.Success}";
+        string log = $"Transaction - Name: {args.PersonName}, Amount: {args.Amount}, Success: {args.Success}";
         transactionEvents.Add(log);
     }
 
@@ -26,7 +25,6 @@ public static class Logger
         {
             Console.WriteLine($"{count++}. {log}");
         }
-
     }
 
     public static void DisplayTransactionEvents()
