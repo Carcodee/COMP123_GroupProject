@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Acirz5aMJxg=",
+  "dgSpecHash": "6U1ysg8R/vm/s6ToFfYxTDKDyZfKb7pVQ6he0j8jv+IxhWR7+lC2lalbWV/7IefxJjWb2L3JNMAeqWuXo+Safg==",
   "success": true,
-  "projectFilePath": "/Users/carlosmatecki/Documents/Github/COMP123_GroupProject/AccountsGUI/AccountsGUI/AccountsGUI.csproj",
-  "expectedPackageFiles": [
-    "/Users/carlosmatecki/.nuget/packages/microsoft.netcore.app.ref/8.0.12/microsoft.netcore.app.ref.8.0.12.nupkg.sha512",
-    "/Users/carlosmatecki/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.12/microsoft.aspnetcore.app.ref.8.0.12.nupkg.sha512",
-    "/Users/carlosmatecki/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.12/microsoft.netcore.app.host.osx-arm64.8.0.12.nupkg.sha512"
-  ],
+  "projectFilePath": "/Users/kevinkhuu/Documents/COMP123 Programming 2/COMP123_GroupProject/AccountsGUI/AccountsGUI/AccountsGUI.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
