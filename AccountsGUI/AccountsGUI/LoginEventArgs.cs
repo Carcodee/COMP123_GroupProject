@@ -1,4 +1,6 @@
-﻿namespace AccountsGUI;
+﻿using System.Reflection;
+
+namespace AccountsGUI;
 
 public enum LoginEventType
 {
@@ -20,5 +22,5 @@ public class LoginEventArgs : EventArgs
         Success = success;
         EventType = loginEventType;
     }
-    
-}
+
+} 

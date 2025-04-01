@@ -37,7 +37,7 @@ public class Person
 
     public override string ToString()
     {
-        return $"{Name} - Authenticated: {IsAuthenticated}";
+        return IsAuthenticated ? $"{Name} - Authenticated" : $"{Name} - Not Authenticated";
     }
 }
 

@@ -1,4 +1,5 @@
 using System.Transactions;
+using System.Xml.Linq;
 using static AccountsGUI.Delegates;
 
 namespace AccountsGUI;
@@ -60,9 +61,8 @@ public abstract class Account
 
         foreach (Person user in users)
         {
-            result += $"   {user.Name} [{user.Sin}] authenticated\n";
+            result += user.IsAuthenticated ? $"   {user.Name} [{user.Sin}] Authenticated\n" : $"   {user.Name} [{user.Sin}] Not authenticated\n";
         }
-
         result += $"Balance: {Balance:c}\n";
 
         if (transactions.Count == 0)

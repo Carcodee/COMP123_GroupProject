@@ -33,6 +33,7 @@ public static class Logger
         int count = 0;
         foreach (string log in transactionEvents)
         {
+            Console.WriteLine("transaction events display test");
             Console.WriteLine($"{count++}. {log}");
         }
     }

@@ -68,13 +68,14 @@ public static class Bank
         else
         {
             Person newUser = new Person(name, sin);
+            Logger.LoginHandler(newUser, new LoginEventArgs($"{newUser.Name}", true, LoginEventType.Login));
             USERS.Add(sin, newUser);
         }
 
     }
     public static void AddAccount(Account account)
     {
-
+        //Logger.TransactionHandler(account, new TransactionEventArgs());
         if (ACCOUNTS.ContainsKey(account.Number))
         {
             throw new AccountException(AccountExceptionType.ACCOUNT_ALREADY_EXIST);
@@ -127,7 +128,7 @@ public static class Bank
     {
         foreach (var user in USERS)
         {
-            Console.WriteLine($"{user.Value.Name} [{user.Value.Sin}] Authenticated: {user.Value.IsAuthenticated}");
+            Console.WriteLine(user.Value.IsAuthenticated ? $"   {user.Value.Name} [{user.Value.Sin}] Authenticated\n" : $"   {user.Value.Name} [{user.Value.Sin}] Not authenticated\n");
         }
     }
 
