@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Security.Principal;
 using System.Transactions;
+using AccountsGUI;
 
 namespace AccountsGUI
 {
     public class SavingAccount : Account
     {
-        private const decimal COST_PER_TRANSACTION = 0.5m;
-        private const decimal INTEREST_RATE = 0.015m;
+        private static decimal COST_PER_TRANSACTION = 0.5M;
+        private static decimal INTEREST_RATE = 0.015M;
 
         public SavingAccount(decimal balance = 0)
             : base("SV", balance)
@@ -47,11 +48,9 @@ namespace AccountsGUI
         public override void PrepareMonthlyReport()
         {
             decimal serviceCharge = transactions.Count * COST_PER_TRANSACTION;
-            decimal interest = LowestBalance * INTEREST_RATE / 12;
+            decimal interest = (LowestBalance * INTEREST_RATE) / 12;
             Balance += interest - serviceCharge;
             transactions.Clear();
         }
     }
 }
-
-

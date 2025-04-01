@@ -61,42 +61,29 @@ public static class Bank
 
     public static void AddPerson(string name, string sin)
     {
-        try
+        if (USERS.ContainsKey(sin))
         {
-            if (USERS.ContainsKey(sin))
-            {
-                throw new AccountException(AccountExceptionType.USER_ALREADY_EXIST);
-            }
-            else
-            {
-                Person newUser = new Person(name, sin);
-                USERS.Add(sin, newUser);
-            }
+            throw new AccountException(AccountExceptionType.USER_ALREADY_EXIST);
         }
-        catch (AccountException e)
+        else
         {
-            Console.WriteLine(e);
-            throw;
+            Person newUser = new Person(name, sin);
+            USERS.Add(sin, newUser);
         }
+
     }
     public static void AddAccount(Account account)
     {
-        try
+
+        if (ACCOUNTS.ContainsKey(account.Number))
         {
-            if (ACCOUNTS.ContainsKey(account.Number))
-            {
-                throw new AccountException(AccountExceptionType.ACCOUNT_ALREADY_EXIST);
-            }
-            else
-            {
-                ACCOUNTS.Add(account.Number, account);
-            }
+            throw new AccountException(AccountExceptionType.ACCOUNT_ALREADY_EXIST);
         }
-        catch (AccountException e)
+        else
         {
-            Console.WriteLine(e);
-            throw;
-        }   
+            ACCOUNTS.Add(account.Number, account);
+        }
+        
     }
 
     public static void AddUserToAccount(string number, string name)
@@ -108,47 +95,31 @@ public static class Bank
     
     public static Account GetAccount(string number)
     {
-        try
+        if (!ACCOUNTS.ContainsKey(number))
         {
-            if (!ACCOUNTS.ContainsKey(number))
-            {
-                throw new AccountException(AccountExceptionType.ACCOUNT_DOES_NOT_EXIST);
-            } 
-            return ACCOUNTS.GetValueOrDefault(number);
-        }
-        catch (AccountException e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
+            throw new AccountException(AccountExceptionType.ACCOUNT_DOES_NOT_EXIST);
+        } 
+        return ACCOUNTS.GetValueOrDefault(number);
     }
     
     public static Person GetUser(string name)
     {
-        try
+        foreach (var user in USERS)
         {
-            foreach (var user in USERS)
+            if (user.Value.Name == name)
             {
-                if (user.Value.Name == name)
-                {
-                    return user.Value;
-                } 
-            }
+                return user.Value;
+            } 
+        }
 
-            throw new AccountException(AccountExceptionType.USER_DOES_NOT_EXIST);
-        }
-        catch (AccountException e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
+        throw new AccountException(AccountExceptionType.USER_DOES_NOT_EXIST);
     }
     
     public static void PrintAccounts()
     {
         foreach (var account in ACCOUNTS)
         {
-            Console.WriteLine(account.ToString());
+            Console.WriteLine($"{account.ToString()}");
         }
     }
     
@@ -156,7 +127,7 @@ public static class Bank
     {
         foreach (var user in USERS)
         {
-            Console.WriteLine(user.ToString());
+            Console.WriteLine($"{user.Value.Name} [{user.Value.Sin}] Authenticated: {user.Value.IsAuthenticated}");
         }
     }
 

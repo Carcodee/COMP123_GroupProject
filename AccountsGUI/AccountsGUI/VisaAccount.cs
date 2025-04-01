@@ -32,7 +32,7 @@ namespace AccountsGUI
                 OnTransactionOccur(person, t);
                 throw new AccountException(AccountExceptionType.USER_NOT_LOGGED_IN);
             }
-            else if(amount > (Balance + CreditLimit)) 
+            else if(amount > (CreditLimit + Balance)) 
             {
                 TransactionEventArgs t = new TransactionEventArgs(person.Name, amount, false);
                 OnTransactionOccur(person, t);

@@ -18,7 +18,7 @@ public abstract class Account
 
     public Account(string type, decimal balance)
     {
-        Number = $"{type}{LAST_NUMBER}";
+        Number = $"{type}-{LAST_NUMBER}";
         LAST_NUMBER = LAST_NUMBER + 1;
         Balance = balance;
         LowestBalance = 0; 
@@ -26,9 +26,9 @@ public abstract class Account
 
     protected void Deposit(decimal balance, Person person)
     {
-        Balance = balance;
+        Balance += balance;
         LowestBalance = Balance;
-        Transaction t = new Transaction(this.Number, this.Balance, person);
+        Transaction t = new Transaction(this.Number, balance, person);
         transactions.Add(t);
     }
 
@@ -56,16 +56,14 @@ public abstract class Account
 
     public override string ToString()
     {
-        string result = $"Account Number: {Number}\n";
+        string result = $"{Number}\n";
 
-        result += $"Users\n";
         foreach (Person user in users)
         {
-            result += $"{user.Name}\n";
+            result += $"   {user.Name} [{user.Sin}] authenticated\n";
         }
 
-        result += $"Balance: {Balance}\n";
-        result += $"Transactions\n";
+        result += $"Balance: {Balance:c}\n";
 
         if (transactions.Count == 0)
         {
@@ -75,7 +73,7 @@ public abstract class Account
         {
             foreach (Transaction t in transactions)
             {
-                result += $"{t}\n";
+                result += $"   {t}\n";
             }
         }
         return result;

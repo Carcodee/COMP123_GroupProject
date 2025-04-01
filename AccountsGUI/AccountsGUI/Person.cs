@@ -14,6 +14,7 @@ public class Person
     {
         Sin = sin;
         Name = name;
+        password = $"{sin[0]}{sin[1]}{sin[2]}";
     }
 
     public void Login(string password)

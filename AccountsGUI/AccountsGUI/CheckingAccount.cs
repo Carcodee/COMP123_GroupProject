@@ -31,7 +31,7 @@ class CheckingAccount : Account
             throw new AccountException(AccountExceptionType.USER_NOT_LOGGED_IN);
         }
 
-        if ( amount < Balance && !hasOverdraft)
+        if ( amount > Balance && !hasOverdraft)
         {
             OnTransactionOccur(person, new TransactionEventArgs(person.Name, amount, false));
             throw new AccountException(AccountExceptionType.CREDIT_LIMIT_HAS_BEEN_EXCEEDED);
