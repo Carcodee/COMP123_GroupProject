@@ -1,32 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PowerUser\\Documents\\GitHub\\COMP123_GroupProject\\AccountsGUI\\AccountsGUI\\AccountsGUI.csproj": {}
+    "/Users/kevinkhuu/Documents/COMP123 Programming 2/COMP123_GroupProject/AccountsGUI/AccountsGUI/AccountsGUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PowerUser\\Documents\\GitHub\\COMP123_GroupProject\\AccountsGUI\\AccountsGUI\\AccountsGUI.csproj": {
+    "/Users/kevinkhuu/Documents/COMP123 Programming 2/COMP123_GroupProject/AccountsGUI/AccountsGUI/AccountsGUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PowerUser\\Documents\\GitHub\\COMP123_GroupProject\\AccountsGUI\\AccountsGUI\\AccountsGUI.csproj",
+        "projectUniqueName": "/Users/kevinkhuu/Documents/COMP123 Programming 2/COMP123_GroupProject/AccountsGUI/AccountsGUI/AccountsGUI.csproj",
         "projectName": "AccountsGUI",
-        "projectPath": "C:\\Users\\PowerUser\\Documents\\GitHub\\COMP123_GroupProject\\AccountsGUI\\AccountsGUI\\AccountsGUI.csproj",
-        "packagesPath": "C:\\Users\\PowerUser\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PowerUser\\Documents\\GitHub\\COMP123_GroupProject\\AccountsGUI\\AccountsGUI\\obj\\",
+        "projectPath": "/Users/kevinkhuu/Documents/COMP123 Programming 2/COMP123_GroupProject/AccountsGUI/AccountsGUI/AccountsGUI.csproj",
+        "packagesPath": "/Users/kevinkhuu/.nuget/packages/",
+        "outputPath": "/Users/kevinkhuu/Documents/COMP123 Programming 2/COMP123_GroupProject/AccountsGUI/AccountsGUI/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\PowerUser\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/kevinkhuu/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,13 +33,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -66,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.402/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
