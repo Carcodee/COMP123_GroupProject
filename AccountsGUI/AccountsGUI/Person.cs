@@ -23,14 +23,16 @@ public class Person
         {
             IsAuthenticated = false;
             onLogin?.Invoke(this, new LoginEventArgs(Name, false, LoginEventType.Login));
+            Logger.LoginHandler(this, new LoginEventArgs($"{this.Name}", false, LoginEventType.Login));
             throw new AccountException(AccountExceptionType.PASSWORD_INCORRECT);
         }
-
+        Logger.LoginHandler(this, new LoginEventArgs($"{this.Name}", true, LoginEventType.Login));
         IsAuthenticated = true;
         onLogin?.Invoke(this, new LoginEventArgs(Name, true, LoginEventType.Login));
     }
     public void Logout()
     {
+        Logger.LoginHandler(this, new LoginEventArgs($"{this.Name}", true, LoginEventType.Logout));
         IsAuthenticated = false;
         onLogin?.Invoke(this, new LoginEventArgs(Name, true, LoginEventType.Logout));
     }

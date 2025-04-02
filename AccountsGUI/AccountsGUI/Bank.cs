@@ -68,7 +68,6 @@ public static class Bank
         else
         {
             Person newUser = new Person(name, sin);
-            Logger.LoginHandler(newUser, new LoginEventArgs($"{newUser.Name}", true, LoginEventType.Login));
             USERS.Add(sin, newUser);
         }
 
