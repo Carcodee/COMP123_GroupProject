@@ -154,8 +154,8 @@ class Program
             Console.WriteLine(account);
 
             Console.WriteLine("\nAfter PrepareMonthlyReport()");
-            Console.WriteLine(account);
             account.PrepareMonthlyReport();   //all transactions are cleared, balance changes
+            Console.WriteLine(account);
         }
 
         Logger.DisplayLoginEvents("Login Events");
