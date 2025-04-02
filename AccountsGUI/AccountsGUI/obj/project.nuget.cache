@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "6U1ysg8R/vm/s6ToFfYxTDKDyZfKb7pVQ6he0j8jv+IxhWR7+lC2lalbWV/7IefxJjWb2L3JNMAeqWuXo+Safg==",
+  "dgSpecHash": "mGSSBJGJ6UU=",
   "success": true,
   "projectFilePath": "/Users/kevinkhuu/Documents/COMP123 Programming 2/COMP123_GroupProject/AccountsGUI/AccountsGUI/AccountsGUI.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/kevinkhuu/.nuget/packages/microsoft.netcore.app.ref/8.0.11/microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
+    "/Users/kevinkhuu/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.11/microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512",
+    "/Users/kevinkhuu/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.11/microsoft.netcore.app.host.osx-arm64.8.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

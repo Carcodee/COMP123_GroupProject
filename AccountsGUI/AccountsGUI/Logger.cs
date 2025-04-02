@@ -14,14 +14,14 @@ public static class Logger
     // Operations: amount in args? What does that mean? -kk
     public static void TransactionHandler(object sender, TransactionEventArgs args)
     {
-        string log = $"Transaction - Name: {args.PersonName}, Amount: {args.Amount}, Success: {args.Success}";
+        string log = $"{args.Amount:C} deposited by {args.PersonName} on {args.Time}";
         transactionEvents.Add(log);
     }
 
     public static void DispalyLoginEvents(string filename)
     {
         Console.WriteLine("Login events:");
-        int count = 0;
+        int count = 1;
         foreach (string log in loginEvents)
         {
             Console.WriteLine($"{count++}. {log}");
@@ -31,8 +31,8 @@ public static class Logger
 
     public static void DisplayTransactionEvents()
     {
-        Console.WriteLine("Transaction events:");
-        int count = 0;
+        Console.WriteLine("\nTransaction events:");
+        int count = 1;
         foreach (string log in transactionEvents)
         {
             Console.WriteLine($"{count++}. {log}");

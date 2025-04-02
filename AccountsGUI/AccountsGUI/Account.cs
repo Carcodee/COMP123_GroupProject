@@ -21,14 +21,20 @@ abstract class Account
         Number = $"{type}{LAST_NUMBER}";
         LAST_NUMBER = LAST_NUMBER + 1;
         Balance = balance;
-        LowestBalance = 0; 
+        LowestBalance = balance; 
     }
 
     protected void Deposit(decimal balance, Person person)
     {
+<<<<<<< Updated upstream
         Balance = balance;
         LowestBalance = Balance;
         Transaction t = new Transaction(this.Number, this.Balance, person);
+=======
+        Balance += balance;
+        LowestBalance = Balance < LowestBalance ? Balance : LowestBalance;
+        Transaction t = new Transaction(this.Number, balance, person);
+>>>>>>> Stashed changes
         transactions.Add(t);
     }
 
@@ -52,6 +58,7 @@ abstract class Account
     public virtual void OnTransactionOccur(object sender, TransactionEventArgs e)
     {
         OnTransaction?.Invoke(sender, e);
+        Logger.TransactionHandler(sender, e);
     }
 
     public override string ToString()

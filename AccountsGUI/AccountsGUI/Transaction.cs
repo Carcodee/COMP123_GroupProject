@@ -14,8 +14,12 @@ namespace AccountsGUI
 
         public override string ToString()
         {
+<<<<<<< Updated upstream
             return $"{AccountNumber} ${Amount} {Originator.Name} {Time}";
             // Example VS-100000 $1,500.00 Narendra 2025-03-22 16:17
+=======
+            return $"{AccountNumber} {Amount:c} {Originator.Name} {Time}";
+>>>>>>> Stashed changes
         }
     }
 }
