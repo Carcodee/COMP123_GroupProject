@@ -6,10 +6,10 @@ namespace AccountsGUI;
 
 public abstract class Account 
 {
-    protected List<Person> users { get; } = new List<Person>();
+    public List<Person> users { get; } = new List<Person>();
     public List<Transaction> transactions { get; } = new List<Transaction>();
     private static int LAST_NUMBER = 100_000;
-    private event TransactionEventHandler OnTransaction; 
+    private event TransactionEventHandler OnTransaction = Logger.TransactionHandler; 
     public decimal Balance { get; protected set; }
     public decimal LowestBalance { get; protected set; }
     public string Number { get; }

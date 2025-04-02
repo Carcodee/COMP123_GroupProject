@@ -75,13 +75,17 @@ public static class Bank
     }
     public static void AddAccount(Account account)
     {
-        //Logger.TransactionHandler(account, new TransactionEventArgs());
         if (ACCOUNTS.ContainsKey(account.Number))
         {
             throw new AccountException(AccountExceptionType.ACCOUNT_ALREADY_EXIST);
         }
         else
         {
+            foreach (var user in account.users)
+            {
+                
+                // Logger.TransactionHandler(account, new TransactionEventArgs(user.Name, ));
+            }
             ACCOUNTS.Add(account.Number, account);
         }
         
