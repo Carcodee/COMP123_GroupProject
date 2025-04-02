@@ -9,11 +9,10 @@ public abstract class Account
     public List<Person> users { get; } = new List<Person>();
     public List<Transaction> transactions { get; } = new List<Transaction>();
     private static int LAST_NUMBER = 100_000;
-    private event TransactionEventHandler OnTransaction = Logger.TransactionHandler; 
+    private event TransactionEventHandler OnTransaction; 
     public decimal Balance { get; protected set; }
     public decimal LowestBalance { get; protected set; }
     public string Number { get; }
-
 
     public abstract void PrepareMonthlyReport();
 
@@ -55,6 +54,7 @@ public abstract class Account
 
     public virtual void OnTransactionOccur(object sender, TransactionEventArgs e)
     {
+        Logger.TransactionHandler(sender, e);
         OnTransaction?.Invoke(sender, e);
     }
 
