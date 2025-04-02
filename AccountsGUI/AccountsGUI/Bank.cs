@@ -83,8 +83,7 @@ public static class Bank
         {
             foreach (var user in account.users)
             {
-                
-                // Logger.TransactionHandler(account, new TransactionEventArgs(user.Name, ));
+                Logger.TransactionHandler(account, new TransactionEventArgs(user.Name, 100, true));
             }
             ACCOUNTS.Add(account.Number, account);
         }

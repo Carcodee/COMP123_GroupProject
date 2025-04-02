@@ -3,7 +3,7 @@ namespace AccountsGUI;
 public class Person
 {
     private string password;
-    private LoginEventHandler onLogin = Logger.LoginHandler;
+    private LoginEventHandler onLogin;
 
     public string Sin { get;}
     public string Name { get;}

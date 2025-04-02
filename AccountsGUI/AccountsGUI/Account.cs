@@ -22,13 +22,16 @@ public abstract class Account
         Number = $"{type}-{LAST_NUMBER}";
         LAST_NUMBER = LAST_NUMBER + 1;
         Balance = balance;
-        LowestBalance = 0; 
+        LowestBalance = Balance; 
     }
 
     protected void Deposit(decimal balance, Person person)
     {
         Balance += balance;
-        LowestBalance = Balance;
+        if (LowestBalance > Balance)
+        {
+            LowestBalance = Balance;
+        }
         Transaction t = new Transaction(this.Number, balance, person);
         transactions.Add(t);
     }
